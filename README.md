@@ -25,6 +25,9 @@ plans, works in parallel and reviews each other. Models run locally with Ollama 
 One engine, three ways in: a **desktop app** (egui), a **CLI**, and an **MCP server** plus a loopback control channel so
 other agents (Claude Code, Cursor and others) can drive it.
 
+![WorkCraft AI Showcase 1](showcase.webp)
+![WorkCraft AI Showcase 2](showcase2.webp)
+
 It is one of two sibling projects:
 
 | Project | What it is |
