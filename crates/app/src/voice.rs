@@ -12,6 +12,11 @@
 //! n-gram post-processor and WorkCraft mention/command normalization (e.g.
 //! `"at gridcraft read column B"` or `"Grid Kraft read column B"` -> `"@gridcraft read column B"`).
 
+#![cfg_attr(
+    not(target_os = "windows"),
+    allow(dead_code, unused_variables, unused_imports)
+)]
+
 use std::f32::consts::PI;
 use std::io::Write;
 use std::path::{Path, PathBuf};

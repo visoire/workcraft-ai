@@ -27,6 +27,10 @@ mod view_chat;
 mod view_settings;
 mod view_side;
 mod view_team;
+#[cfg_attr(
+    not(target_os = "windows"),
+    allow(dead_code, unused_variables, unused_imports)
+)]
 mod voice;
 mod widgets;
 
