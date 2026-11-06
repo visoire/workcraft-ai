@@ -1,0 +1,6 @@
+{
+  "photocraft": {
+    "addr": "127.0.0.1:7878",
+    "token_file": "C:/Users/you/PhotoCraft/control.token"
+  }
+}

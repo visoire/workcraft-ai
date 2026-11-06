@@ -1,0 +1,372 @@
+{
+  "app": "solidcraft",
+  "label": "SolidCraft",
+  "server_info": {
+    "name": "solidcraft",
+    "title": "SolidCraft",
+    "version": "0.30.1"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 21,
+  "annotated_count": 21,
+  "schema_bytes": 28568,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "describe_command",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Describe a command"
+      }
+    },
+    {
+      "name": "execute",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "expect",
+        "params",
+        "verbose"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Execute a command"
+      }
+    },
+    {
+      "name": "batch",
+      "required": [
+        "commands"
+      ],
+      "properties": [
+        "coalesce_parameters",
+        "commands",
+        "expect",
+        "profile",
+        "rollback",
+        "timings",
+        "verbose"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Run several commands"
+      }
+    },
+    {
+      "name": "inspect_design",
+      "required": [],
+      "properties": [
+        "joints",
+        "measure",
+        "sketches"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect the design"
+      }
+    },
+    {
+      "name": "measure",
+      "required": [],
+      "properties": [
+        "body",
+        "items",
+        "names_only",
+        "summary"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Measure bodies"
+      }
+    },
+    {
+      "name": "body_topology",
+      "required": [
+        "body"
+      ],
+      "properties": [
+        "body",
+        "faces"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List edges and faces"
+      }
+    },
+    {
+      "name": "set_parameter",
+      "required": [
+        "name"
+      ],
+      "properties": [
+        "comment",
+        "expression",
+        "name",
+        "unit",
+        "value"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set a parameter"
+      }
+    },
+    {
+      "name": "check_parameters",
+      "required": [
+        "set"
+      ],
+      "properties": [
+        "report",
+        "set"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Try parameter values"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [
+        "axes",
+        "camera",
+        "grid",
+        "height",
+        "path",
+        "source",
+        "view",
+        "width"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Look at the design"
+      }
+    },
+    {
+      "name": "compare_picture",
+      "required": [
+        "reference"
+      ],
+      "properties": [
+        "bodies",
+        "camera",
+        "crop_fraction",
+        "crop_px",
+        "fit",
+        "reference",
+        "rows",
+        "view"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Compare with a reference picture"
+      }
+    },
+    {
+      "name": "export",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "bodies",
+        "effort",
+        "format",
+        "mesh_prefix",
+        "path",
+        "velocity"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Export"
+      }
+    },
+    {
+      "name": "crash_reports",
+      "required": [],
+      "properties": [
+        "id",
+        "limit"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Crash reports"
+      }
+    },
+    {
+      "name": "running",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "What the app is running"
+      }
+    },
+    {
+      "name": "pending",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Result of a running request"
+      }
+    },
+    {
+      "name": "undo",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Undo"
+      }
+    },
+    {
+      "name": "redo",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Redo"
+      }
+    },
+    {
+      "name": "new_design",
+      "required": [],
+      "properties": [
+        "name"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "New design"
+      }
+    },
+    {
+      "name": "open",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "names",
+        "path",
+        "up"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Open a design"
+      }
+    },
+    {
+      "name": "save",
+      "required": [],
+      "properties": [
+        "format",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Save the design"
+      }
+    },
+    {
+      "name": "skill_reference",
+      "required": [
+        "skill"
+      ],
+      "properties": [
+        "file",
+        "skill"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Skill reference"
+      }
+    }
+  ]
+}

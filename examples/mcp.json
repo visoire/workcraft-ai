@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "photocraft": { "command": "photocraft-cli", "args": ["mcp"] },
+    "vectorcraft": { "command": "vectorcraft-cli", "args": ["mcp", "--headless"] },
+    "filmcraft": { "command": "filmcraft-cli", "args": ["mcp"] },
+    "pdfcraft": { "command": "pdfcraft-cli", "args": ["mcp", "--compact"] },
+    "workspace": { "url": "http://localhost:5175/mcp", "disabled": true }
+  }
+}

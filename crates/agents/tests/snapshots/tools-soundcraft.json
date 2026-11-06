@@ -1,0 +1,195 @@
+{
+  "app": "soundcraft",
+  "label": "SoundCraft",
+  "server_info": {
+    "name": "soundcraft",
+    "version": "0.18.0"
+  },
+  "capabilities": {
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 17,
+  "annotated_count": 0,
+  "schema_bytes": 4120,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "execute",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "batch",
+      "required": [
+        "calls"
+      ],
+      "properties": [
+        "calls",
+        "keep_going"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "inspect_session",
+      "required": [],
+      "properties": [
+        "detail"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "new_session",
+      "required": [],
+      "properties": [
+        "name",
+        "sample_rate",
+        "template"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "open_session",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "save_session",
+      "required": [],
+      "properties": [
+        "path",
+        "replace"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "import_audio",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "at",
+        "path",
+        "track"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "bounce_mix",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "bit_depth",
+        "end",
+        "format",
+        "normalize",
+        "path",
+        "start"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "parity",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "ui_set",
+      "required": [
+        "state"
+      ],
+      "properties": [
+        "state"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "menu_invoke",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "click",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": [
+        "button",
+        "count",
+        "x",
+        "y"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "drag",
+      "required": [
+        "to_x",
+        "to_y",
+        "x",
+        "y"
+      ],
+      "properties": [
+        "to_x",
+        "to_y",
+        "x",
+        "y"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "alt",
+        "cmd",
+        "ctrl",
+        "key",
+        "shift"
+      ],
+      "annotations": null
+    }
+  ]
+}

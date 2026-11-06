@@ -1,0 +1,45 @@
+[workspace]
+resolver = "3"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0-alpha.9"
+edition = "2024"
+license = "MIT OR Apache-2.0"
+rust-version = "1.90"
+authors = ["WorkCraft contributors"]
+repository = "https://github.com/visoire/workcraft-ai"
+homepage = "https://github.com/visoire/workcraft-ai#readme"
+
+[workspace.dependencies]
+workcraft-core = { path = "crates/core" }
+workcraft-llm = { path = "crates/llm" }
+workcraft-store = { path = "crates/store" }
+workcraft-mcp = { path = "crates/mcp" }
+workcraft-control = { path = "crates/control" }
+workcraft-agents = { path = "crates/agents" }
+
+serde = { version = "1", features = ["derive"] }
+serde_json = { version = "1", features = ["preserve_order"] }
+thiserror = "2"
+chrono = { version = "0.4", default-features = false, features = ["std", "clock"] }
+uuid = { version = "1", features = ["v4"] }
+tokio = { version = "1", features = ["rt-multi-thread", "macros", "sync", "time", "io-util", "io-std", "process", "net", "fs", "signal"] }
+futures-util = "0.3"
+async-trait = "0.1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "stream", "rustls-tls"] }
+tracing = "0.1"
+base64 = "0.23"
+image = { version = "0.25", default-features = false, features = ["png", "jpeg", "gif", "webp", "bmp"] }
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+
+[workspace.lints.clippy]
+dbg_macro = "warn"
+todo = "warn"
+
+[profile.release]
+lto = "thin"
+codegen-units = 4
+strip = true

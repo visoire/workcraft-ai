@@ -1,0 +1,633 @@
+{
+  "app": "vectorcraft",
+  "label": "VectorCraft",
+  "server_info": {
+    "name": "vectorcraft",
+    "title": "VectorCraft",
+    "version": "0.22.0"
+  },
+  "capabilities": {
+    "completions": {},
+    "logging": {},
+    "prompts": {
+      "listChanged": false
+    },
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 33,
+  "annotated_count": 33,
+  "schema_bytes": 40491,
+  "tools": [
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "brief",
+        "enabled_only",
+        "filter",
+        "menu",
+        "query"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run a command"
+      }
+    },
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "atomic",
+        "label",
+        "steps",
+        "stop_on_error"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run several commands"
+      }
+    },
+    {
+      "name": "doc_inspect",
+      "required": [],
+      "properties": [
+        "childLimit",
+        "depth",
+        "ids",
+        "kind",
+        "limit",
+        "offset"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect document"
+      }
+    },
+    {
+      "name": "render_preview",
+      "required": [],
+      "properties": [
+        "artboard",
+        "max_side",
+        "traceViews"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render a preview"
+      }
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect the interface"
+      }
+    },
+    {
+      "name": "ui_screenshot",
+      "required": [],
+      "properties": [
+        "max_side"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Capture the interface"
+      }
+    },
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "brief",
+        "enabledOnly",
+        "filter",
+        "menu",
+        "query"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "run_command",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run command"
+      }
+    },
+    {
+      "name": "inspect_document",
+      "required": [],
+      "properties": [
+        "childLimit",
+        "depth",
+        "ids",
+        "kind",
+        "limit",
+        "offset"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect document"
+      }
+    },
+    {
+      "name": "inspect_ui",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect UI"
+      }
+    },
+    {
+      "name": "select_tool",
+      "required": [
+        "tool"
+      ],
+      "properties": [
+        "tool"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select tool"
+      }
+    },
+    {
+      "name": "pointer_gesture",
+      "required": [
+        "events"
+      ],
+      "properties": [
+        "backquote",
+        "events",
+        "mods",
+        "tool"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Pointer gesture"
+      }
+    },
+    {
+      "name": "draw_path",
+      "required": [],
+      "properties": [
+        "cap",
+        "closed",
+        "d",
+        "dash",
+        "effects",
+        "fill",
+        "join",
+        "name",
+        "opacity",
+        "points",
+        "stroke",
+        "strokeWidth"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Draw path"
+      }
+    },
+    {
+      "name": "draw_shape",
+      "required": [
+        "shape"
+      ],
+      "properties": [
+        "cap",
+        "cx",
+        "cy",
+        "dash",
+        "effects",
+        "fill",
+        "height",
+        "join",
+        "name",
+        "opacity",
+        "points",
+        "radius",
+        "radius1",
+        "radius2",
+        "rotation",
+        "shape",
+        "sides",
+        "stroke",
+        "strokeWidth",
+        "width",
+        "x",
+        "x1",
+        "x2",
+        "y",
+        "y1",
+        "y2"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Draw shape"
+      }
+    },
+    {
+      "name": "set_paint",
+      "required": [],
+      "properties": [
+        "fill",
+        "ids",
+        "stroke",
+        "strokeWidth"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set paint"
+      }
+    },
+    {
+      "name": "press_key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "key",
+        "mods"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Press key"
+      }
+    },
+    {
+      "name": "type_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Type text"
+      }
+    },
+    {
+      "name": "answer_dialog",
+      "required": [],
+      "properties": [
+        "action",
+        "set"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Answer dialog"
+      }
+    },
+    {
+      "name": "invoke_menu",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Invoke menu"
+      }
+    },
+    {
+      "name": "open_panel",
+      "required": [
+        "panel"
+      ],
+      "properties": [
+        "panel"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open panel"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [
+        "artboard",
+        "max_side",
+        "path",
+        "scale",
+        "traceViews",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Screenshot"
+      }
+    },
+    {
+      "name": "open_file",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open file"
+      }
+    },
+    {
+      "name": "save_file",
+      "required": [],
+      "properties": [
+        "compress",
+        "options",
+        "path",
+        "precision",
+        "preview",
+        "version"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save file"
+      }
+    },
+    {
+      "name": "export",
+      "required": [],
+      "properties": [
+        "artboard",
+        "format",
+        "options",
+        "outlineText",
+        "path",
+        "range",
+        "scale",
+        "selection"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Export"
+      }
+    },
+    {
+      "name": "add_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "color",
+        "fit",
+        "fitMinPercent",
+        "font",
+        "height",
+        "justify",
+        "mode",
+        "path",
+        "pathEffect",
+        "size",
+        "text",
+        "vertical",
+        "width",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Add text"
+      }
+    },
+    {
+      "name": "apply_effect",
+      "required": [],
+      "properties": [
+        "effect",
+        "ids",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Apply live effect"
+      }
+    },
+    {
+      "name": "pathfinder",
+      "required": [
+        "operation"
+      ],
+      "properties": [
+        "ids",
+        "operation"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Pathfinder"
+      }
+    },
+    {
+      "name": "transform",
+      "required": [],
+      "properties": [
+        "copy",
+        "dx",
+        "dy",
+        "ids",
+        "origin",
+        "reflect",
+        "rotate",
+        "scale",
+        "scaleX",
+        "scaleY",
+        "shear"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Transform"
+      }
+    },
+    {
+      "name": "create_graph",
+      "required": [
+        "height",
+        "width",
+        "x",
+        "y"
+      ],
+      "properties": [
+        "categories",
+        "csv",
+        "height",
+        "rows",
+        "series",
+        "type",
+        "width",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Create graph"
+      }
+    },
+    {
+      "name": "text_wrap",
+      "required": [],
+      "properties": [
+        "ids",
+        "invert",
+        "offset",
+        "release"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Text wrap"
+      }
+    },
+    {
+      "name": "undo",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Undo"
+      }
+    },
+    {
+      "name": "redo",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Redo"
+      }
+    }
+  ]
+}

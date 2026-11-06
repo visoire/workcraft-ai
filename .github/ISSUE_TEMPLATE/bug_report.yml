@@ -1,0 +1,67 @@
+name: Bug report
+description: Something in WorkCraft AI does not work as it should
+title: "[Bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. WorkCraft AI is an **alpha**, so bugs are expected and useful.
+        **Never paste API keys, tokens or private files.** Remove them from logs and screenshots first.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: "`workcraft-cli --version`, or the number shown in Settings."
+      placeholder: "0.1.0-alpha.9"
+    validations:
+      required: true
+  - type: dropdown
+    id: system
+    attributes:
+      label: Operating system
+      options: ["Windows 11", "Windows 10", "macOS", "Linux", "Other"]
+    validations:
+      required: true
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where does it happen?
+      options: ["Desktop app", "CLI (workcraft-cli chat)", "MCP server or control channel", "A Craft app connection", "Build from source", "Other"]
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open Settings > Providers and pick ...
+        2. Send "..."
+        3. ...
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model and provider (if the bug involves a chat)
+      placeholder: "ollama:qwen2.5:7b, deepseek:deepseek-chat, ..."
+  - type: textarea
+    id: logs
+    attributes:
+      label: Error text or log lines (without secrets)
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before you submit
+      options:
+        - label: I looked through the open issues and this is not a duplicate.
+          required: true
+        - label: I removed every key, token and private path from what I pasted.
+          required: true

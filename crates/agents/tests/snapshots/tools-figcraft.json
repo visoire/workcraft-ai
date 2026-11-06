@@ -1,0 +1,366 @@
+{
+  "app": "figcraft",
+  "label": "FigCraft",
+  "server_info": {
+    "name": "figcraft",
+    "title": "FigCraft",
+    "version": "0.16.0"
+  },
+  "capabilities": {
+    "prompts": {
+      "listChanged": false
+    },
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 19,
+  "annotated_count": 19,
+  "schema_bytes": 30685,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "run_command",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "document",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run command"
+      }
+    },
+    {
+      "name": "batch",
+      "required": [
+        "commands"
+      ],
+      "properties": [
+        "commands",
+        "document",
+        "label",
+        "onError"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run commands as one step"
+      }
+    },
+    {
+      "name": "create_node",
+      "required": [
+        "type"
+      ],
+      "properties": [
+        "closed",
+        "document",
+        "height",
+        "index",
+        "name",
+        "parent",
+        "path",
+        "points",
+        "props",
+        "select",
+        "text",
+        "type",
+        "width",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Create layer"
+      }
+    },
+    {
+      "name": "set_properties",
+      "required": [
+        "props"
+      ],
+      "properties": [
+        "document",
+        "ids",
+        "props"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set properties"
+      }
+    },
+    {
+      "name": "inspect_document",
+      "required": [],
+      "properties": [
+        "allPages",
+        "depth",
+        "document",
+        "fields",
+        "maxBytes",
+        "outline"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect document"
+      }
+    },
+    {
+      "name": "get_node",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "depth",
+        "document",
+        "fields",
+        "id",
+        "maxBytes",
+        "offset",
+        "outline"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get layer"
+      }
+    },
+    {
+      "name": "select",
+      "required": [
+        "ids"
+      ],
+      "properties": [
+        "document",
+        "ids"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select layers"
+      }
+    },
+    {
+      "name": "export",
+      "required": [],
+      "properties": [
+        "bleed",
+        "bleedMarks",
+        "cmyk",
+        "contentsOnly",
+        "cropMarks",
+        "document",
+        "format",
+        "ids",
+        "includeBoundingBox",
+        "path",
+        "scale",
+        "size",
+        "svgIdAttribute",
+        "svgOutlineText",
+        "svgSimplifyStroke",
+        "vdCompat"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Export"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [
+        "document",
+        "ids",
+        "maxSize",
+        "scale",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Screenshot"
+      }
+    },
+    {
+      "name": "open_file",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path",
+        "reload",
+        "variables"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open file"
+      }
+    },
+    {
+      "name": "save_file",
+      "required": [],
+      "properties": [
+        "document",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save file"
+      }
+    },
+    {
+      "name": "undo",
+      "required": [],
+      "properties": [
+        "document"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Undo"
+      }
+    },
+    {
+      "name": "redo",
+      "required": [],
+      "properties": [
+        "document"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Redo"
+      }
+    },
+    {
+      "name": "pointer",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": [
+        "alt",
+        "cmd",
+        "ctrl",
+        "kind",
+        "pressure",
+        "pressureTo",
+        "shift",
+        "steps",
+        "to",
+        "tool",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Pointer gesture"
+      }
+    },
+    {
+      "name": "key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "alt",
+        "cmd",
+        "ctrl",
+        "key",
+        "shift"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Press key"
+      }
+    },
+    {
+      "name": "type_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "id",
+        "text"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Type text"
+      }
+    },
+    {
+      "name": "inspect_ui",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect UI"
+      }
+    },
+    {
+      "name": "wait_for_changes",
+      "required": [],
+      "properties": [
+        "after",
+        "limit",
+        "timeoutMs",
+        "topics"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Wait for changes"
+      }
+    }
+  ]
+}

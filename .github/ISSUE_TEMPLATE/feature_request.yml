@@ -1,0 +1,31 @@
+name: Feature request
+description: Suggest an idea or an improvement
+title: "[Idea] "
+labels: ["enhancement", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        WorkCraft AI is local-first and in alpha. Small, focused ideas that fit that direction are the easiest to build.
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+      description: Describe what you are trying to do and where it gets in the way.
+    validations:
+      required: true
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like to happen?
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives you considered
+  - type: dropdown
+    id: help
+    attributes:
+      label: Could you help build it?
+      options: ["Yes, I would like to send a pull request", "I can test it", "No, I just have the idea"]

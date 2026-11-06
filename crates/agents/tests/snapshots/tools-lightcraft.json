@@ -1,0 +1,338 @@
+{
+  "app": "lightcraft",
+  "label": "LightCraft",
+  "server_info": {
+    "name": "lightcraft",
+    "title": "LightCraft",
+    "version": "0.19.0"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 17,
+  "annotated_count": 17,
+  "schema_bytes": 19018,
+  "tools": [
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "enabled_only",
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run command"
+      }
+    },
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps",
+        "stop_on_error"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run commands"
+      }
+    },
+    {
+      "name": "doc_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect library"
+      }
+    },
+    {
+      "name": "render_preview",
+      "required": [],
+      "properties": [
+        "format",
+        "id",
+        "max_side"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render preview"
+      }
+    },
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "run_command",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run command"
+      }
+    },
+    {
+      "name": "import",
+      "required": [
+        "paths"
+      ],
+      "properties": [
+        "album",
+        "destination",
+        "mode",
+        "onDeleted",
+        "organize",
+        "paths",
+        "rename"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Import photos"
+      }
+    },
+    {
+      "name": "query_photos",
+      "required": [],
+      "properties": [
+        "filter",
+        "limit",
+        "offset",
+        "sort"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Query photos"
+      }
+    },
+    {
+      "name": "select_photos",
+      "required": [
+        "ids"
+      ],
+      "properties": [
+        "active",
+        "ids",
+        "mode"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select photos"
+      }
+    },
+    {
+      "name": "list_controls",
+      "required": [],
+      "properties": [
+        "section"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List develop controls"
+      }
+    },
+    {
+      "name": "get_develop",
+      "required": [],
+      "properties": [
+        "id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get develop settings"
+      }
+    },
+    {
+      "name": "set_develop",
+      "required": [],
+      "properties": [
+        "id",
+        "label",
+        "settings",
+        "values"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set develop settings"
+      }
+    },
+    {
+      "name": "apply_preset",
+      "required": [
+        "preset"
+      ],
+      "properties": [
+        "amount",
+        "ids",
+        "preset"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Apply preset"
+      }
+    },
+    {
+      "name": "crop",
+      "required": [],
+      "properties": [
+        "angle",
+        "id",
+        "rect",
+        "reset"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Crop / straighten"
+      }
+    },
+    {
+      "name": "render_photo",
+      "required": [],
+      "properties": [
+        "format",
+        "id",
+        "path",
+        "size"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Render photo"
+      }
+    },
+    {
+      "name": "export",
+      "required": [],
+      "properties": [
+        "addToPhotos",
+        "background",
+        "bitDepth",
+        "colorSpace",
+        "conflict",
+        "destinationMode",
+        "dir",
+        "dngCompression",
+        "dontEnlarge",
+        "fit",
+        "format",
+        "hdr",
+        "hdrTransfer",
+        "height",
+        "id",
+        "ids",
+        "jxlEffort",
+        "jxlLossless",
+        "jxlProgressive",
+        "limitKb",
+        "longEdge",
+        "megapixels",
+        "metadata",
+        "naming",
+        "path",
+        "percent",
+        "photosAlbum",
+        "ppi",
+        "preset",
+        "quality",
+        "removeLocation",
+        "resize",
+        "sharpen",
+        "sharpenAmount",
+        "shortEdge",
+        "startNumber",
+        "subfolder",
+        "tiffCompression",
+        "watermark",
+        "width"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Export photo"
+      }
+    }
+  ]
+}

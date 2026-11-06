@@ -1,0 +1,68 @@
+# Labels for the repository. scripts/publish.ps1 labels (or publish.sh labels) creates or updates these with `gh label create --force`.
+# Format: name | color (hex, no #) | description
+- name: bug
+  color: d73a4a
+  description: Something does not work as it should
+- name: enhancement
+  color: a2eeef
+  description: New feature or improvement
+- name: needs-triage
+  color: fbca04
+  description: Waiting for a first look
+- name: alpha
+  color: e99695
+  description: Related to the alpha phase (breaking changes, rough edges)
+- name: good first issue
+  color: 7057ff
+  description: A good place to start
+- name: help wanted
+  color: 008672
+  description: Extra attention or a contributor is welcome
+- name: compatibility
+  color: 0e8a16
+  description: A Craft app, model, provider or system that does or does not work
+- name: craft-apps
+  color: 1d76db
+  description: Connections to the Craft apps
+- name: mcp
+  color: 5319e7
+  description: MCP client, server or tools
+- name: agents
+  color: 0052cc
+  description: Agents, teams and approvals
+- name: providers
+  color: c5def5
+  description: Model providers (Ollama, OpenAI-compatible, Anthropic)
+- name: ui
+  color: bfd4f2
+  description: The desktop window, themes and Blip
+- name: voice
+  color: f9d0c4
+  description: Voice input (Handy)
+- name: docs
+  color: 0075ca
+  description: Documentation
+- name: windows
+  color: 0078d6
+  description: Specific to Windows
+- name: macos
+  color: 999999
+  description: Specific to macOS
+- name: linux
+  color: f29513
+  description: Specific to Linux
+- name: security
+  color: b60205
+  description: Security related (report vulnerabilities privately instead)
+- name: question
+  color: d876e3
+  description: A question rather than a bug
+- name: duplicate
+  color: cfd3d7
+  description: Already reported
+- name: wontfix
+  color: ffffff
+  description: Will not be worked on
+- name: invalid
+  color: e4e669
+  description: Not a valid report

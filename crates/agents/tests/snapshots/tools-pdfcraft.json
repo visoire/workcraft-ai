@@ -1,0 +1,326 @@
+{
+  "app": "pdfcraft",
+  "label": "PdfCraft",
+  "server_info": {
+    "name": "pdfcraft",
+    "title": "PdfCraft",
+    "version": "0.19.0",
+    "websiteUrl": "https://getartcraft.com/apps/pdfcraft"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 17,
+  "annotated_count": 17,
+  "schema_bytes": 14048,
+  "tools": [
+    {
+      "name": "doc_open",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "password",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open a PDF"
+      }
+    },
+    {
+      "name": "doc_info",
+      "required": [
+        "doc"
+      ],
+      "properties": [
+        "doc"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect a document"
+      }
+    },
+    {
+      "name": "doc_save",
+      "required": [
+        "doc"
+      ],
+      "properties": [
+        "doc",
+        "flatten_fill_sign",
+        "full",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save a document"
+      }
+    },
+    {
+      "name": "doc_close",
+      "required": [
+        "doc"
+      ],
+      "properties": [
+        "discard_changes",
+        "doc"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Close a document"
+      }
+    },
+    {
+      "name": "page_render",
+      "required": [
+        "doc",
+        "page"
+      ],
+      "properties": [
+        "doc",
+        "dpi",
+        "hide_added_text",
+        "hide_text_block",
+        "page"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render a page"
+      }
+    },
+    {
+      "name": "text_extract",
+      "required": [
+        "doc"
+      ],
+      "properties": [
+        "doc",
+        "pages",
+        "rect"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Extract text"
+      }
+    },
+    {
+      "name": "text_find",
+      "required": [
+        "doc",
+        "query"
+      ],
+      "properties": [
+        "doc",
+        "limit",
+        "query",
+        "skip",
+        "start_page"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Find text"
+      }
+    },
+    {
+      "name": "doc_combine",
+      "required": [
+        "paths"
+      ],
+      "properties": [
+        "field_conflicts",
+        "groups",
+        "open",
+        "out",
+        "pages",
+        "passwords",
+        "paths"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Combine files"
+      }
+    },
+    {
+      "name": "doc_split",
+      "required": [
+        "doc",
+        "out_dir"
+      ],
+      "properties": [
+        "before",
+        "bookmarks",
+        "doc",
+        "every",
+        "max_mb",
+        "out_dir"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Split a document"
+      }
+    },
+    {
+      "name": "edit_undo",
+      "required": [
+        "doc"
+      ],
+      "properties": [
+        "doc"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Undo"
+      }
+    },
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "doc",
+        "enabled_only",
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run a command"
+      }
+    },
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps",
+        "stop_on_error"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run several commands"
+      }
+    },
+    {
+      "name": "doc_inspect",
+      "required": [],
+      "properties": [
+        "doc"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect open documents"
+      }
+    },
+    {
+      "name": "render_preview",
+      "required": [],
+      "properties": [
+        "doc",
+        "max_side",
+        "page"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render a preview"
+      }
+    },
+    {
+      "name": "tool_search",
+      "required": [],
+      "properties": [
+        "category",
+        "name",
+        "query"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Find PdfCraft tools"
+      }
+    },
+    {
+      "name": "tool_call",
+      "required": [
+        "name"
+      ],
+      "properties": [
+        "arguments",
+        "name"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run any PdfCraft tool"
+      }
+    }
+  ]
+}

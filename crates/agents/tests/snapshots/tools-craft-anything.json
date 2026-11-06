@@ -1,0 +1,542 @@
+{
+  "app": "craft-anything",
+  "label": "Craft Anything",
+  "server_info": {
+    "name": "craft-anything",
+    "title": "Craft Anything",
+    "version": "0.5.0"
+  },
+  "capabilities": {
+    "completions": {},
+    "logging": {},
+    "prompts": {
+      "listChanged": false
+    },
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {
+      "listChanged": true
+    }
+  },
+  "tool_count": 30,
+  "annotated_count": 30,
+  "schema_bytes": 29337,
+  "tools": [
+    {
+      "name": "core_target_close",
+      "required": [],
+      "properties": [
+        "target_id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Close"
+      }
+    },
+    {
+      "name": "core_session_show",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Session status"
+      }
+    },
+    {
+      "name": "core_targets_list",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List open targets"
+      }
+    },
+    {
+      "name": "core_target_select",
+      "required": [
+        "target_id"
+      ],
+      "properties": [
+        "target_id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Switch target"
+      }
+    },
+    {
+      "name": "core_evidence_show",
+      "required": [],
+      "properties": [
+        "detail",
+        "evidence_id",
+        "operation"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Evidence so far"
+      }
+    },
+    {
+      "name": "core_evidence_export",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "overwrite",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Export evidence"
+      }
+    },
+    {
+      "name": "core_evidence_import",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Import evidence"
+      }
+    },
+    {
+      "name": "core_unknowns_show",
+      "required": [],
+      "properties": [
+        "domain",
+        "severity",
+        "status"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Open questions"
+      }
+    },
+    {
+      "name": "core_unknown_add",
+      "required": [
+        "question"
+      ],
+      "properties": [
+        "domain",
+        "evidence_against",
+        "evidence_for",
+        "probes",
+        "question",
+        "severity"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Record an open question"
+      }
+    },
+    {
+      "name": "core_unknown_edit",
+      "required": [
+        "based_on_revision",
+        "unknown_id"
+      ],
+      "properties": [
+        "based_on_revision",
+        "evidence_against",
+        "evidence_for",
+        "probes",
+        "resolution",
+        "severity",
+        "status",
+        "unknown_id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Update an open question"
+      }
+    },
+    {
+      "name": "core_unknown_verify",
+      "required": [
+        "unknown_id"
+      ],
+      "properties": [
+        "unknown_id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Check an answer"
+      }
+    },
+    {
+      "name": "core_person_ask",
+      "required": [
+        "question"
+      ],
+      "properties": [
+        "allow_text",
+        "choices",
+        "context",
+        "question"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Ask the person"
+      }
+    },
+    {
+      "name": "core_action_approve",
+      "required": [
+        "tool_name"
+      ],
+      "properties": [
+        "input",
+        "tool_name",
+        "tool_use_id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Approve an agent action"
+      }
+    },
+    {
+      "name": "assets_image_generate",
+      "required": [
+        "prompt",
+        "save_as"
+      ],
+      "properties": [
+        "prompt",
+        "save_as",
+        "shape"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Generate a picture"
+      }
+    },
+    {
+      "name": "assets_model_generate",
+      "required": [
+        "save_as"
+      ],
+      "properties": [
+        "faces",
+        "image",
+        "prompt",
+        "save_as",
+        "textured"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": true,
+        "readOnlyHint": false,
+        "title": "Generate a 3D model"
+      }
+    },
+    {
+      "name": "core_investigation_show",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Investigation so far"
+      }
+    },
+    {
+      "name": "core_brief_write",
+      "required": [
+        "question"
+      ],
+      "properties": [
+        "constraints",
+        "done_when",
+        "purpose",
+        "question",
+        "targets"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Write the brief"
+      }
+    },
+    {
+      "name": "core_plan_update",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "based_on_revision",
+        "steps"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Update the plan"
+      }
+    },
+    {
+      "name": "core_hypothesis_record",
+      "required": [
+        "claim"
+      ],
+      "properties": [
+        "claim",
+        "evidence_against",
+        "evidence_for",
+        "prediction"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Record a hypothesis"
+      }
+    },
+    {
+      "name": "core_hypothesis_update",
+      "required": [
+        "hypothesis_id"
+      ],
+      "properties": [
+        "add_contradicting_evidence_ids",
+        "add_supporting_evidence_ids",
+        "hypothesis_id",
+        "note",
+        "status"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Update a hypothesis"
+      }
+    },
+    {
+      "name": "core_finding_record",
+      "required": [
+        "evidence_ids",
+        "statement"
+      ],
+      "properties": [
+        "confidence",
+        "evidence_ids",
+        "statement"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Record a finding"
+      }
+    },
+    {
+      "name": "core_finding_edit",
+      "required": [
+        "evidence_ids",
+        "finding_id",
+        "statement"
+      ],
+      "properties": [
+        "based_on_revision",
+        "confidence",
+        "evidence_ids",
+        "finding_id",
+        "statement"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Update a finding"
+      }
+    },
+    {
+      "name": "core_handoff_write",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Write the handoff"
+      }
+    },
+    {
+      "name": "core_journal_read",
+      "required": [],
+      "properties": [
+        "day",
+        "kind",
+        "limit",
+        "offset",
+        "tool"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Read the journal"
+      }
+    },
+    {
+      "name": "core_report_save",
+      "required": [
+        "path",
+        "text"
+      ],
+      "properties": [
+        "path",
+        "text"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save a report"
+      }
+    },
+    {
+      "name": "core_report_write",
+      "required": [],
+      "properties": [
+        "format",
+        "include_evidence",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Write a readable report"
+      }
+    },
+    {
+      "name": "core_evidence_browse",
+      "required": [
+        "show",
+        "source"
+      ],
+      "properties": [
+        "show",
+        "source"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Page through evidence"
+      }
+    },
+    {
+      "name": "rebuild_check",
+      "required": [],
+      "properties": [
+        "project",
+        "wait_minutes"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Check my build"
+      }
+    },
+    {
+      "name": "list_toolsets",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List toolsets"
+      }
+    },
+    {
+      "name": "enable_toolset",
+      "required": [
+        "toolset"
+      ],
+      "properties": [
+        "toolset"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Enable a toolset"
+      }
+    }
+  ]
+}

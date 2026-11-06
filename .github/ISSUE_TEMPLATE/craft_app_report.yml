@@ -1,0 +1,44 @@
+name: Craft app or model report
+description: Tell us how a Craft app, a model or another system worked (or did not) with WorkCraft AI
+title: "[Report] "
+labels: ["compatibility", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Test reports help most: which app version, which model, what you asked for and what happened.
+        Problems **inside** a Craft app belong to its own repository under github.com/storytold.
+  - type: input
+    id: app
+    attributes:
+      label: Craft app and version
+      placeholder: "WordCraft 0.16.0"
+    validations:
+      required: true
+  - type: input
+    id: model
+    attributes:
+      label: Model
+      placeholder: "ollama:qwen2.5:7b, claude, deepseek-chat, ..."
+    validations:
+      required: true
+  - type: input
+    id: system
+    attributes:
+      label: Operating system
+      placeholder: "Windows 11, macOS 15, Ubuntu 24.04"
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: What did you ask, and what happened?
+    validations:
+      required: true
+  - type: dropdown
+    id: result
+    attributes:
+      label: Result
+      options: ["It worked", "It partly worked", "It failed", "It crashed"]
+    validations:
+      required: true

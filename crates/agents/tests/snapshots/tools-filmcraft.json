@@ -1,0 +1,262 @@
+{
+  "app": "filmcraft",
+  "label": "FilmCraft",
+  "server_info": {
+    "name": "filmcraft",
+    "version": "0.18.0"
+  },
+  "capabilities": {
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 17,
+  "annotated_count": 17,
+  "schema_bytes": 10341,
+  "tools": [
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps",
+        "stop_on_error"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "enabled_only",
+        "filter"
+      ],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "media_import",
+      "required": [
+        "paths"
+      ],
+      "properties": [
+        "bin",
+        "image_sequence",
+        "paths"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "project_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "render_frame",
+      "required": [],
+      "properties": [
+        "max_side",
+        "seconds"
+      ],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "render_preview",
+      "required": [],
+      "properties": [
+        "max_side",
+        "seconds"
+      ],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "sequence_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_click",
+      "required": [],
+      "properties": [
+        "button",
+        "count",
+        "id",
+        "modifiers",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_control",
+      "required": [
+        "method"
+      ],
+      "properties": [
+        "method",
+        "params"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_drag",
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": [
+        "from",
+        "modifiers",
+        "steps",
+        "to"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_elements",
+      "required": [],
+      "properties": [
+        "prefix"
+      ],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "key"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_screenshot",
+      "required": [],
+      "properties": [
+        "max_side",
+        "panel"
+      ],
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_type",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "_comment": "Read by scripts/publish.ps1 and publish.sh (meta). Edit here, then run: scripts/publish.ps1 meta -Execute",
+  "repo": "visoire/workcraft-ai",
+  "visibility": "public",
+  "default_branch": "main",
+  "description": "Alpha: local-first AI chat and multi-agent desktop app in Rust (egui). Ollama or your own API keys, MCP, 17 Craft apps. MIT OR Apache-2.0.",
+  "homepage": "https://github.com/visoire/workcraft-ai#readme",
+  "topics": [
+    "ai", "ai-agents", "multi-agent", "chatbot", "llm", "mcp", "model-context-protocol", "ollama", "rust", "egui",
+    "local-first", "privacy", "desktop-app", "windows", "claude", "openai", "deepseek", "agent-skills", "alpha", "open-source"
+  ],
+  "features": { "issues": true, "discussions": true, "wiki": false, "projects": false },
+  "short_description": "Local-first AI chat and multi-agent desktop app in Rust.",
+  "long_description": "WorkCraft AI is a native Rust desktop app (egui), CLI and MCP server for chatting with local or hosted models that can read your files and drive the Craft apps (documents, spreadsheets, photos, video, CAD). Single assistant or a team of agents that plan, work in parallel and review each other, with approvals for risky actions. Alpha: Windows is the verified platform. MIT OR Apache-2.0."
+}

@@ -1,0 +1,473 @@
+{
+  "app": "designcraft",
+  "label": "DesignCraft",
+  "server_info": {
+    "name": "designcraft",
+    "title": "DesignCraft",
+    "version": "0.18.0",
+    "websiteUrl": "https://getartcraft.com/apps/designcraft"
+  },
+  "capabilities": {
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 26,
+  "annotated_count": 26,
+  "schema_bytes": 21136,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "enabledOnly",
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "execute",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Execute command"
+      }
+    },
+    {
+      "name": "batch",
+      "required": [],
+      "properties": [
+        "commands",
+        "script"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Execute commands"
+      }
+    },
+    {
+      "name": "inspect_document",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect document"
+      }
+    },
+    {
+      "name": "get_story",
+      "required": [],
+      "properties": [
+        "frame",
+        "story"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get story"
+      }
+    },
+    {
+      "name": "set_story_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "frame",
+        "story",
+        "text"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set story text"
+      }
+    },
+    {
+      "name": "new_document",
+      "required": [],
+      "properties": [
+        "bleed",
+        "columns",
+        "facingPages",
+        "gutter",
+        "height",
+        "intent",
+        "margins",
+        "pages",
+        "preset",
+        "primaryTextFrame",
+        "sample",
+        "slug",
+        "startPage",
+        "title",
+        "units",
+        "width"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "New document"
+      }
+    },
+    {
+      "name": "open_document",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open document"
+      }
+    },
+    {
+      "name": "save_document",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save document"
+      }
+    },
+    {
+      "name": "place_image",
+      "required": [],
+      "properties": [
+        "base64",
+        "frame",
+        "name",
+        "path",
+        "spread",
+        "width",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Place image"
+      }
+    },
+    {
+      "name": "render_page",
+      "required": [],
+      "properties": [
+        "bleed",
+        "page",
+        "path",
+        "scale"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Render page"
+      }
+    },
+    {
+      "name": "export_png",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "page",
+        "path",
+        "scale"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Export PNG"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Screenshot"
+      }
+    },
+    {
+      "name": "select_tool",
+      "required": [
+        "tool"
+      ],
+      "properties": [
+        "tool"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select tool"
+      }
+    },
+    {
+      "name": "pointer",
+      "required": [
+        "events"
+      ],
+      "properties": [
+        "events",
+        "mods",
+        "tool"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Pointer gesture"
+      }
+    },
+    {
+      "name": "key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "alt",
+        "cmd",
+        "ctrl",
+        "key",
+        "shift"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Press key"
+      }
+    },
+    {
+      "name": "type_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Type text"
+      }
+    },
+    {
+      "name": "ime",
+      "required": [],
+      "properties": [
+        "active",
+        "commit",
+        "preedit"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Input method"
+      }
+    },
+    {
+      "name": "click",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": [
+        "alt",
+        "button",
+        "cmd",
+        "count",
+        "ctrl",
+        "shift",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Click"
+      }
+    },
+    {
+      "name": "drag",
+      "required": [
+        "toX",
+        "toY",
+        "x",
+        "y"
+      ],
+      "properties": [
+        "alt",
+        "button",
+        "cmd",
+        "ctrl",
+        "shift",
+        "steps",
+        "toX",
+        "toY",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Drag"
+      }
+    },
+    {
+      "name": "menu_list",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List menus"
+      }
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect UI"
+      }
+    },
+    {
+      "name": "ui_set",
+      "required": [],
+      "properties": [
+        "baselineGrid",
+        "brightness",
+        "closePanel",
+        "controlBar",
+        "dockExpanded",
+        "documentGrid",
+        "fit",
+        "frameEdges",
+        "guides",
+        "page",
+        "panel",
+        "rulers",
+        "screenMode",
+        "status",
+        "textThreads",
+        "zoom"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set UI state"
+      }
+    },
+    {
+      "name": "dialog_set",
+      "required": [
+        "field",
+        "value"
+      ],
+      "properties": [
+        "field",
+        "value"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set dialog field"
+      }
+    },
+    {
+      "name": "dialog_confirm",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Confirm dialog"
+      }
+    },
+    {
+      "name": "dialog_cancel",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Cancel dialog"
+      }
+    }
+  ]
+}

@@ -1,0 +1,406 @@
+{
+  "app": "gridcraft",
+  "label": "GridCraft",
+  "server_info": {
+    "name": "gridcraft",
+    "title": "GridCraft",
+    "version": "0.17.0"
+  },
+  "capabilities": {
+    "prompts": {
+      "listChanged": false
+    },
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 22,
+  "annotated_count": 22,
+  "schema_bytes": 21006,
+  "tools": [
+    {
+      "name": "execute_command",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "doc",
+        "params",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Execute command"
+      }
+    },
+    {
+      "name": "list_windows",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List windows"
+      }
+    },
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "search"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "inspect_workbook",
+      "required": [],
+      "properties": [
+        "doc",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect workbook"
+      }
+    },
+    {
+      "name": "read_range",
+      "required": [],
+      "properties": [
+        "doc",
+        "formatted",
+        "formulas",
+        "range",
+        "sheet",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Read range"
+      }
+    },
+    {
+      "name": "write_range",
+      "required": [
+        "range",
+        "values"
+      ],
+      "properties": [
+        "doc",
+        "parse",
+        "range",
+        "values",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Write range"
+      }
+    },
+    {
+      "name": "set_cell",
+      "required": [
+        "cell",
+        "input"
+      ],
+      "properties": [
+        "cell",
+        "doc",
+        "input",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set cell"
+      }
+    },
+    {
+      "name": "get_cell",
+      "required": [
+        "cell"
+      ],
+      "properties": [
+        "cell",
+        "doc",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get cell"
+      }
+    },
+    {
+      "name": "evaluate_formula",
+      "required": [
+        "formula"
+      ],
+      "properties": [
+        "cell",
+        "doc",
+        "formula",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Evaluate formula"
+      }
+    },
+    {
+      "name": "select",
+      "required": [
+        "range"
+      ],
+      "properties": [
+        "active",
+        "doc",
+        "range",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select"
+      }
+    },
+    {
+      "name": "format_range",
+      "required": [
+        "range"
+      ],
+      "properties": [
+        "bold",
+        "borders",
+        "doc",
+        "fillColor",
+        "fontColor",
+        "fontName",
+        "fontSize",
+        "horizontalAlign",
+        "italic",
+        "numberFormat",
+        "range",
+        "underline",
+        "window",
+        "wrapText"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Format range"
+      }
+    },
+    {
+      "name": "insert_chart",
+      "required": [
+        "range",
+        "type"
+      ],
+      "properties": [
+        "at",
+        "doc",
+        "range",
+        "subtype",
+        "title",
+        "type",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Insert chart"
+      }
+    },
+    {
+      "name": "create_table",
+      "required": [
+        "range"
+      ],
+      "properties": [
+        "doc",
+        "header",
+        "name",
+        "range",
+        "style",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Create table"
+      }
+    },
+    {
+      "name": "sort_range",
+      "required": [
+        "keys"
+      ],
+      "properties": [
+        "doc",
+        "header",
+        "keys",
+        "range",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Sort range"
+      }
+    },
+    {
+      "name": "filter",
+      "required": [
+        "column"
+      ],
+      "properties": [
+        "blanks",
+        "clear",
+        "column",
+        "custom",
+        "doc",
+        "range",
+        "top",
+        "values",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Filter"
+      }
+    },
+    {
+      "name": "open_workbook",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open workbook"
+      }
+    },
+    {
+      "name": "save_workbook",
+      "required": [],
+      "properties": [
+        "doc",
+        "path",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save workbook"
+      }
+    },
+    {
+      "name": "new_workbook",
+      "required": [],
+      "properties": [
+        "sample"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "New workbook"
+      }
+    },
+    {
+      "name": "undo",
+      "required": [],
+      "properties": [
+        "doc",
+        "steps",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Undo"
+      }
+    },
+    {
+      "name": "redo",
+      "required": [],
+      "properties": [
+        "doc",
+        "steps",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Redo"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Screenshot"
+      }
+    },
+    {
+      "name": "list_functions",
+      "required": [],
+      "properties": [
+        "category",
+        "search"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List functions"
+      }
+    }
+  ]
+}

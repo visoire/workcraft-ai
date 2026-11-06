@@ -1,0 +1,9 @@
+{
+  "id": "colorist",
+  "name": "Colorist",
+  "scope": "Grades photos and video frames.",
+  "prompt": "You grade images. Inspect the document first, change one thing at a time and check each change with a preview.",
+  "model": null,
+  "tools": ["lightcraft__*", "photocraft__*", "read_file", "list_dir", "memory_*", "read_skill"],
+  "skills": ["lightcraft", "photocraft"]
+}

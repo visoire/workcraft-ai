@@ -1,0 +1,23 @@
+﻿[package]
+name = "workcraft-cli"
+description = "WorkCraft headless: chat, control channel, MCP server."
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+
+[[bin]]
+name = "workcraft-cli"
+path = "src/main.rs"
+
+[dependencies]
+workcraft-core.workspace = true
+workcraft-control.workspace = true
+workcraft-mcp.workspace = true
+workcraft-agents.workspace = true
+serde_json.workspace = true
+tokio.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,415 @@
+{
+  "app": "deckcraft",
+  "label": "DeckCraft",
+  "server_info": {
+    "name": "deckcraft",
+    "title": "DeckCraft",
+    "version": "0.16.0",
+    "websiteUrl": "https://getartcraft.com/apps/deckcraft"
+  },
+  "capabilities": {
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 25,
+  "annotated_count": 25,
+  "schema_bytes": 15885,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "run_command",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run a command"
+      }
+    },
+    {
+      "name": "batch",
+      "required": [
+        "commands"
+      ],
+      "properties": [
+        "commands",
+        "keepGoing"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run several commands"
+      }
+    },
+    {
+      "name": "new_presentation",
+      "required": [],
+      "properties": [
+        "blank",
+        "theme"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "New presentation"
+      }
+    },
+    {
+      "name": "open_presentation",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open presentation"
+      }
+    },
+    {
+      "name": "save_presentation",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save presentation"
+      }
+    },
+    {
+      "name": "export",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "all",
+        "dpi",
+        "format",
+        "frame",
+        "includeHidden",
+        "layout",
+        "loop",
+        "orientation",
+        "paper",
+        "path",
+        "perPage",
+        "scale",
+        "secondsPerSlide",
+        "slide",
+        "slides",
+        "textLayer",
+        "width"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Export"
+      }
+    },
+    {
+      "name": "inspect_document",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect presentation"
+      }
+    },
+    {
+      "name": "inspect_slide",
+      "required": [],
+      "properties": [
+        "index"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect slide"
+      }
+    },
+    {
+      "name": "render_slide",
+      "required": [],
+      "properties": [
+        "edit",
+        "scale",
+        "slide"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render slide"
+      }
+    },
+    {
+      "name": "add_slide",
+      "required": [],
+      "properties": [
+        "body",
+        "layout",
+        "title"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Add slide"
+      }
+    },
+    {
+      "name": "go_to_slide",
+      "required": [
+        "index"
+      ],
+      "properties": [
+        "index"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Go to slide"
+      }
+    },
+    {
+      "name": "add_shape",
+      "required": [
+        "h",
+        "preset",
+        "w",
+        "x",
+        "y"
+      ],
+      "properties": [
+        "fill",
+        "h",
+        "line",
+        "preset",
+        "text",
+        "w",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Add shape"
+      }
+    },
+    {
+      "name": "add_text_box",
+      "required": [
+        "text",
+        "w",
+        "x",
+        "y"
+      ],
+      "properties": [
+        "align",
+        "color",
+        "h",
+        "size",
+        "text",
+        "w",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Add text box"
+      }
+    },
+    {
+      "name": "set_text",
+      "required": [
+        "id",
+        "text"
+      ],
+      "properties": [
+        "id",
+        "text"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set text"
+      }
+    },
+    {
+      "name": "insert_picture",
+      "required": [],
+      "properties": [
+        "data",
+        "h",
+        "name",
+        "path",
+        "w",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Insert picture"
+      }
+    },
+    {
+      "name": "insert_table",
+      "required": [
+        "cols",
+        "rows"
+      ],
+      "properties": [
+        "cols",
+        "data",
+        "h",
+        "rows",
+        "w",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Insert table"
+      }
+    },
+    {
+      "name": "insert_chart",
+      "required": [],
+      "properties": [
+        "categories",
+        "h",
+        "series",
+        "title",
+        "type",
+        "w",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Insert chart"
+      }
+    },
+    {
+      "name": "select",
+      "required": [
+        "ids"
+      ],
+      "properties": [
+        "ids"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select shapes"
+      }
+    },
+    {
+      "name": "pointer",
+      "required": [
+        "events"
+      ],
+      "properties": [
+        "events",
+        "mods"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Pointer gesture"
+      }
+    },
+    {
+      "name": "select_tool",
+      "required": [
+        "tool"
+      ],
+      "properties": [
+        "preset",
+        "tool"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select tool"
+      }
+    },
+    {
+      "name": "key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "key",
+        "mods"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Press key"
+      }
+    },
+    {
+      "name": "type_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Type text"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Screenshot"
+      }
+    },
+    {
+      "name": "call_app",
+      "required": [
+        "method"
+      ],
+      "properties": [
+        "method",
+        "params"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Call app method"
+      }
+    }
+  ]
+}

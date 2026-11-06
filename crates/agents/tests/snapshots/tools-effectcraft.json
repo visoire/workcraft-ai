@@ -1,0 +1,471 @@
+{
+  "app": "effectcraft",
+  "label": "EffectCraft",
+  "server_info": {
+    "name": "effectcraft",
+    "title": "EffectCraft (headless)",
+    "version": "0.22.0"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": false,
+      "subscribe": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 27,
+  "annotated_count": 27,
+  "schema_bytes": 25164,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "compact",
+        "enabled_only",
+        "filter",
+        "schemas"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "describe_command",
+      "required": [],
+      "properties": [
+        "command",
+        "id"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Describe command"
+      }
+    },
+    {
+      "name": "execute_command",
+      "required": [],
+      "properties": [
+        "command",
+        "id",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Execute command"
+      }
+    },
+    {
+      "name": "run_script",
+      "required": [
+        "code"
+      ],
+      "properties": [
+        "code",
+        "name"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run script"
+      }
+    },
+    {
+      "name": "get_project",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get project"
+      }
+    },
+    {
+      "name": "get_comp",
+      "required": [],
+      "properties": [
+        "comp"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get comp"
+      }
+    },
+    {
+      "name": "get_layer",
+      "required": [
+        "layer"
+      ],
+      "properties": [
+        "comp",
+        "depth",
+        "flat",
+        "layer",
+        "time"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get layer"
+      }
+    },
+    {
+      "name": "get_property",
+      "required": [
+        "layer",
+        "path"
+      ],
+      "properties": [
+        "comp",
+        "layer",
+        "path",
+        "time"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get property"
+      }
+    },
+    {
+      "name": "set_property",
+      "required": [
+        "layer",
+        "path"
+      ],
+      "properties": [
+        "comp",
+        "expression",
+        "layer",
+        "path",
+        "time",
+        "timeBase",
+        "value"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Set property"
+      }
+    },
+    {
+      "name": "add_keyframe",
+      "required": [
+        "layer",
+        "path"
+      ],
+      "properties": [
+        "comp",
+        "interpolation",
+        "keys",
+        "layer",
+        "path",
+        "time",
+        "timeBase",
+        "value"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Add keyframe"
+      }
+    },
+    {
+      "name": "add_effect",
+      "required": [
+        "effect",
+        "layer"
+      ],
+      "properties": [
+        "comp",
+        "effect",
+        "layer",
+        "values"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Add effect"
+      }
+    },
+    {
+      "name": "list_effects",
+      "required": [],
+      "properties": [
+        "compact",
+        "filter"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List effects"
+      }
+    },
+    {
+      "name": "list_fonts",
+      "required": [],
+      "properties": [
+        "query",
+        "rescan",
+        "variable"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List fonts"
+      }
+    },
+    {
+      "name": "get_state",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Get state"
+      }
+    },
+    {
+      "name": "render_frame",
+      "required": [],
+      "properties": [
+        "comp",
+        "inline",
+        "max_side",
+        "path",
+        "time",
+        "transparent"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Render frame"
+      }
+    },
+    {
+      "name": "open_project",
+      "required": [],
+      "properties": [
+        "demo",
+        "new",
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open project"
+      }
+    },
+    {
+      "name": "save_project",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save project"
+      }
+    },
+    {
+      "name": "undo",
+      "required": [],
+      "properties": [
+        "steps"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Undo"
+      }
+    },
+    {
+      "name": "redo",
+      "required": [],
+      "properties": [
+        "steps"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Redo"
+      }
+    },
+    {
+      "name": "history",
+      "required": [],
+      "properties": [
+        "goto"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "History"
+      }
+    },
+    {
+      "name": "script_ui",
+      "required": [],
+      "properties": [
+        "action",
+        "result",
+        "value",
+        "widget",
+        "window"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Script ui"
+      }
+    },
+    {
+      "name": "batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "atomic",
+        "label",
+        "steps"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Batch"
+      }
+    },
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "compact",
+        "enabled_only",
+        "filter",
+        "schemas"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Command list"
+      }
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Command run"
+      }
+    },
+    {
+      "name": "render_preview",
+      "required": [],
+      "properties": [
+        "comp",
+        "max_side",
+        "time",
+        "transparent"
+      ],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render preview"
+      }
+    },
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps",
+        "stop_on_error"
+      ],
+      "annotations": {
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Command batch"
+      }
+    },
+    {
+      "name": "doc_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Doc inspect"
+      }
+    }
+  ]
+}

@@ -1,0 +1,242 @@
+{
+  "app": "texturecraft",
+  "label": "TextureCraft",
+  "server_info": {
+    "name": "texturecraft",
+    "version": "0.4.0"
+  },
+  "capabilities": {
+    "tools": {}
+  },
+  "tool_count": 22,
+  "annotated_count": 0,
+  "schema_bytes": 13493,
+  "tools": [
+    {
+      "name": "bake",
+      "required": [],
+      "properties": [
+        "cpu",
+        "maps",
+        "resolution",
+        "ts"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "bake_mesh_add",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "cage",
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "material_load",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "material_save",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "layer",
+        "name",
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "mesh_export",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "format",
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "mesh_import",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path",
+        "resolution"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "mesh_reimport",
+      "required": [],
+      "properties": [
+        "path",
+        "preserveStrokes"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "paint_stroke",
+      "required": [
+        "points"
+      ],
+      "properties": [
+        "color",
+        "hardness",
+        "height",
+        "metallic",
+        "points",
+        "roughness",
+        "size",
+        "viewport"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "project_new",
+      "required": [],
+      "properties": [
+        "mesh",
+        "name",
+        "resolution",
+        "template"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "project_open",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "project_save",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "resource_import",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "session_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "textures_export",
+      "required": [
+        "dir"
+      ],
+      "properties": [
+        "dir",
+        "format",
+        "padding",
+        "preset",
+        "size",
+        "ts"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "ui_menu_invoke",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "ui_screenshot",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "viewport_render",
+      "required": [],
+      "properties": [
+        "bounces",
+        "cpu",
+        "height",
+        "pitch",
+        "samples",
+        "view",
+        "width",
+        "yaw"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "viewport_screenshot",
+      "required": [],
+      "properties": [
+        "view"
+      ],
+      "annotations": null
+    }
+  ]
+}

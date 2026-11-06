@@ -1,0 +1,142 @@
+{
+  "app": "cadcraft",
+  "label": "CADCraft",
+  "server_info": {
+    "name": "cadcraft",
+    "title": "CADCraft",
+    "version": "0.18.0"
+  },
+  "capabilities": {
+    "resources": {
+      "listChanged": false
+    },
+    "tools": {
+      "listChanged": false
+    }
+  },
+  "tool_count": 12,
+  "annotated_count": 0,
+  "schema_bytes": 5744,
+  "tools": [
+    {
+      "name": "command_line",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "script",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "text"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "execute",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "params"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "inspect_drawing",
+      "required": [],
+      "properties": [
+        "entities",
+        "limit"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "query_entities",
+      "required": [],
+      "properties": [
+        "crossing",
+        "layer",
+        "limit",
+        "offset",
+        "selected",
+        "type",
+        "window"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "render",
+      "required": [],
+      "properties": [
+        "background",
+        "fit",
+        "height",
+        "path",
+        "plot_style",
+        "width",
+        "window"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "find_text",
+      "required": [],
+      "properties": [
+        "contains",
+        "layer",
+        "limit",
+        "offset",
+        "window"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "new_drawing",
+      "required": [],
+      "properties": [
+        "metric"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "open",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "save",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "cancel",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    }
+  ]
+}

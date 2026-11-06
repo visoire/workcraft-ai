@@ -1,0 +1,58 @@
+name: release
+
+# Builds the Windows binaries when a version tag is pushed (v0.1.0-alpha.9, ...) and publishes a GitHub PRE-RELEASE.
+# Alpha tags (anything with "-") are always pre-releases. No secrets are needed: the built-in GITHUB_TOKEN is enough.
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: "Existing tag to build and release (for example v0.1.0-alpha.9)"
+        required: true
+
+permissions:
+  contents: write
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.inputs.tag || github.ref }}
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Build
+        run: cargo build --release -p workcraft-app -p workcraft-cli
+      - name: Collect files
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force out | Out-Null
+          Copy-Item target/release/workcraft.exe out/WorkCraft.exe
+          Copy-Item target/release/workcraft-cli.exe out/WorkCraft-CLI.exe
+          Push-Location out
+          Get-FileHash -Algorithm SHA256 WorkCraft.exe, WorkCraft-CLI.exe | ForEach-Object { "$($_.Hash.ToLower())  $(Split-Path $_.Path -Leaf)" } | Set-Content -Encoding ascii SHA256SUMS.txt
+          Compress-Archive -Path WorkCraft.exe, WorkCraft-CLI.exe, SHA256SUMS.txt -DestinationPath WorkCraft-windows-x64.zip
+          Pop-Location
+      - name: Release notes
+        shell: pwsh
+        run: |
+          $tag = "${{ github.event.inputs.tag || github.ref_name }}"
+          $ver = $tag.TrimStart('v')
+          $file = "docs/releases/$ver.md"
+          if (Test-Path $file) { Copy-Item $file notes.md }
+          else {
+            $text = Get-Content CHANGELOG.md -Raw
+            $m = [regex]::Match($text, "(?ms)^## \[$([regex]::Escape($ver))\][^\n]*\n(.*?)(?=^## \[|\z)")
+            if ($m.Success) { Set-Content notes.md $m.Groups[1].Value.Trim() } else { Set-Content notes.md "Alpha build $ver. See CHANGELOG.md." }
+          }
+          Add-Content notes.md "`n`n> **Alpha.** This is a pre-release. Windows is the only verified platform and the binaries are not code-signed. Check them against SHA256SUMS.txt."
+      - name: Publish pre-release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $tag = "${{ github.event.inputs.tag || github.ref_name }}"
+          # Every release stays a pre-release until the maintainer decides otherwise.
+          gh release create $tag out/WorkCraft.exe out/WorkCraft-CLI.exe out/SHA256SUMS.txt out/WorkCraft-windows-x64.zip --title "WorkCraft AI $($tag.TrimStart('v'))" --notes-file notes.md --prerelease --verify-tag

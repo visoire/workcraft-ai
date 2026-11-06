@@ -1,0 +1,249 @@
+{
+  "app": "wordcraft",
+  "label": "WordCraft",
+  "server_info": {
+    "name": "wordcraft",
+    "title": "WordCraft",
+    "version": "0.16.0",
+    "websiteUrl": "https://getartcraft.com/apps/wordcraft"
+  },
+  "capabilities": {
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 17,
+  "annotated_count": 17,
+  "schema_bytes": 8708,
+  "tools": [
+    {
+      "name": "list_commands",
+      "required": [],
+      "properties": [
+        "query"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "List commands"
+      }
+    },
+    {
+      "name": "execute",
+      "required": [
+        "command"
+      ],
+      "properties": [
+        "command",
+        "doc",
+        "params"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run a command"
+      }
+    },
+    {
+      "name": "batch",
+      "required": [
+        "commands"
+      ],
+      "properties": [
+        "commands",
+        "doc",
+        "keepGoing"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Run several commands"
+      }
+    },
+    {
+      "name": "new_document",
+      "required": [],
+      "properties": [
+        "template"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "New document"
+      }
+    },
+    {
+      "name": "open_document",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "password",
+        "path"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Open"
+      }
+    },
+    {
+      "name": "save_document",
+      "required": [],
+      "properties": [
+        "doc",
+        "path"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Save"
+      }
+    },
+    {
+      "name": "type_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "doc",
+        "paragraphs",
+        "text"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Type text"
+      }
+    },
+    {
+      "name": "select_text",
+      "required": [
+        "text"
+      ],
+      "properties": [
+        "doc",
+        "occurrence",
+        "text"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Select text"
+      }
+    },
+    {
+      "name": "get_text",
+      "required": [],
+      "properties": [
+        "doc"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Document text"
+      }
+    },
+    {
+      "name": "inspect_document",
+      "required": [],
+      "properties": [
+        "doc"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect document"
+      }
+    },
+    {
+      "name": "render_page",
+      "required": [],
+      "properties": [
+        "doc",
+        "page",
+        "scale"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Render page"
+      }
+    },
+    {
+      "name": "list_documents",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Open documents"
+      }
+    },
+    {
+      "name": "parity",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Feature parity"
+      }
+    },
+    {
+      "name": "screenshot",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Screenshot app"
+      }
+    },
+    {
+      "name": "click",
+      "required": [
+        "x",
+        "y"
+      ],
+      "properties": [
+        "cmd",
+        "count",
+        "shift",
+        "x",
+        "y"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Click"
+      }
+    },
+    {
+      "name": "key",
+      "required": [
+        "key"
+      ],
+      "properties": [
+        "alt",
+        "cmd",
+        "key",
+        "shift"
+      ],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": false,
+        "title": "Press key"
+      }
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "openWorldHint": false,
+        "readOnlyHint": true,
+        "title": "Inspect UI"
+      }
+    }
+  ]
+}

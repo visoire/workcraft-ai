@@ -1,0 +1,227 @@
+{
+  "app": "materialcraft",
+  "label": "MaterialCraft",
+  "server_info": {
+    "name": "materialcraft",
+    "version": "0.2.0"
+  },
+  "capabilities": {
+    "tools": {}
+  },
+  "tool_count": 20,
+  "annotated_count": 0,
+  "schema_bytes": 11649,
+  "tools": [
+    {
+      "name": "bitmap_import",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "name",
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "filter"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "graph_new",
+      "required": [],
+      "properties": [
+        "name",
+        "size",
+        "template"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "library_list",
+      "required": [],
+      "properties": [
+        "category",
+        "filter"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "material_export",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "graph",
+        "path",
+        "size",
+        "values"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "node_add",
+      "required": [
+        "def"
+      ],
+      "properties": [
+        "at",
+        "connectFrom",
+        "def",
+        "params"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "node_connect",
+      "required": [
+        "from",
+        "to"
+      ],
+      "properties": [
+        "from",
+        "fromPort",
+        "to",
+        "toPort"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "node_param",
+      "required": [
+        "id",
+        "param",
+        "value"
+      ],
+      "properties": [
+        "id",
+        "param",
+        "value"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "outputs_export",
+      "required": [
+        "dir"
+      ],
+      "properties": [
+        "depth",
+        "dir",
+        "format",
+        "graph",
+        "pattern",
+        "size"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "package_open",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "package_save",
+      "required": [],
+      "properties": [
+        "path"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "session_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "ui_input",
+      "required": [
+        "events"
+      ],
+      "properties": [
+        "events"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "ui_menu_invoke",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "ui_screenshot",
+      "required": [],
+      "properties": [],
+      "annotations": null
+    },
+    {
+      "name": "view_render",
+      "required": [],
+      "properties": [
+        "displacement",
+        "full",
+        "height",
+        "hq",
+        "node",
+        "pitch",
+        "port",
+        "scene",
+        "tiling",
+        "view",
+        "width",
+        "yaw"
+      ],
+      "annotations": null
+    },
+    {
+      "name": "view_screenshot",
+      "required": [],
+      "properties": [
+        "view"
+      ],
+      "annotations": null
+    }
+  ]
+}

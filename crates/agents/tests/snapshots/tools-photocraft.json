@@ -1,0 +1,458 @@
+{
+  "app": "photocraft",
+  "label": "PhotoCraft",
+  "server_info": {
+    "name": "photocraft",
+    "version": "0.21.0"
+  },
+  "capabilities": {
+    "resources": {},
+    "tools": {}
+  },
+  "tool_count": 26,
+  "annotated_count": 26,
+  "schema_bytes": 30889,
+  "tools": [
+    {
+      "name": "command_batch",
+      "required": [
+        "steps"
+      ],
+      "properties": [
+        "steps",
+        "stop_on_error"
+      ],
+      "annotations": {
+        "title": "Command batch",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "command_list",
+      "required": [],
+      "properties": [
+        "enabled_only",
+        "filter"
+      ],
+      "annotations": {
+        "title": "Command list",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "command_run",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id",
+        "params",
+        "wait"
+      ],
+      "annotations": {
+        "title": "Command run",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "control_call",
+      "required": [
+        "method"
+      ],
+      "properties": [
+        "method",
+        "params"
+      ],
+      "annotations": {
+        "title": "Control call",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_close",
+      "required": [],
+      "properties": [
+        "index"
+      ],
+      "annotations": {
+        "title": "Doc close",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_export",
+      "required": [],
+      "properties": [
+        "ddsCompression",
+        "ddsMipmaps",
+        "dpxBits",
+        "format",
+        "index",
+        "path",
+        "pcraftFullComposite",
+        "quality",
+        "tgaBits",
+        "tiffCompression",
+        "tiffLayers",
+        "tiffPyramid",
+        "tiffTransparency"
+      ],
+      "annotations": {
+        "title": "Doc export",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_export_data_sets",
+      "required": [
+        "dir"
+      ],
+      "properties": [
+        "data_sets",
+        "dir",
+        "format",
+        "index",
+        "naming"
+      ],
+      "annotations": {
+        "title": "Doc export data sets",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_export_layers",
+      "required": [
+        "dir"
+      ],
+      "properties": [
+        "dir",
+        "format",
+        "index",
+        "prefix",
+        "quality",
+        "visible_only"
+      ],
+      "annotations": {
+        "title": "Doc export layers",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_import_data_sets",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "delimiter",
+        "index",
+        "path"
+      ],
+      "annotations": {
+        "title": "Doc import data sets",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_inspect",
+      "required": [],
+      "properties": [
+        "index"
+      ],
+      "annotations": {
+        "title": "Doc inspect",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_new",
+      "required": [],
+      "properties": [
+        "background",
+        "depth",
+        "height",
+        "mode",
+        "name",
+        "width"
+      ],
+      "annotations": {
+        "title": "Doc new",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_open",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "approve_high_memory",
+        "path"
+      ],
+      "annotations": {
+        "title": "Doc open",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_place",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "approve_high_memory",
+        "center",
+        "fit",
+        "index",
+        "path",
+        "scale"
+      ],
+      "annotations": {
+        "title": "Doc place",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_render_preview",
+      "required": [],
+      "properties": [
+        "index",
+        "max_side"
+      ],
+      "annotations": {
+        "title": "Doc render preview",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_replace_smart_object",
+      "required": [
+        "path"
+      ],
+      "properties": [
+        "index",
+        "layer",
+        "path"
+      ],
+      "annotations": {
+        "title": "Doc replace smart object",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_save",
+      "required": [],
+      "properties": [
+        "ddsCompression",
+        "ddsMipmaps",
+        "dpxBits",
+        "format",
+        "index",
+        "path",
+        "pcraftFullComposite",
+        "quality",
+        "tgaBits",
+        "tiffCompression",
+        "tiffLayers",
+        "tiffPyramid",
+        "tiffTransparency"
+      ],
+      "annotations": {
+        "title": "Doc save",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "doc_select",
+      "required": [
+        "index"
+      ],
+      "properties": [
+        "index"
+      ],
+      "annotations": {
+        "title": "Doc select",
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "jobs_cancel",
+      "required": [],
+      "properties": [
+        "job"
+      ],
+      "annotations": {
+        "title": "Jobs cancel",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "jobs_list",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "title": "Jobs list",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "render_preview",
+      "required": [],
+      "properties": [
+        "index",
+        "max_side"
+      ],
+      "annotations": {
+        "title": "Render preview",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "session_list",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "title": "Session list",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_inspect",
+      "required": [],
+      "properties": [],
+      "annotations": {
+        "title": "Ui inspect",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_menu_invoke",
+      "required": [
+        "id"
+      ],
+      "properties": [
+        "id"
+      ],
+      "annotations": {
+        "title": "Ui menu invoke",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_pointer",
+      "required": [
+        "events"
+      ],
+      "properties": [
+        "button",
+        "events",
+        "modifiers"
+      ],
+      "annotations": {
+        "title": "Ui pointer",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_screenshot",
+      "required": [],
+      "properties": [
+        "max_side"
+      ],
+      "annotations": {
+        "title": "Ui screenshot",
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "ui_set",
+      "required": [
+        "fields"
+      ],
+      "properties": [
+        "fields"
+      ],
+      "annotations": {
+        "title": "Ui set",
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

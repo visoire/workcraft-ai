@@ -1,0 +1,38 @@
+# Build output
+/target
+/dist
+# The binaries in the repository root are local copies of target/release; releases attach them instead
+/WorkCraft.exe
+/WorkCraft-CLI.exe
+*.exe
+*.pdb
+*.zip
+
+# Credentials and local data. Keys are never committed: use the environment or Settings > Providers.
+*.log
+.env
+.env.*
+!.env.example
+keys.json
+config.json
+control.json
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# Editors, operating system, assistants' local files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/
+*.swp
+.claude/
+CLAUDE.local.md
+
+# Scratch results of local test runs
+/target-*/
+/scratch/
